@@ -1,0 +1,1 @@
+demo : [http://oxmo456.github.io/yeoman_angularjs_test](http://oxmo456.github.io/yeoman_angularjs_test)
