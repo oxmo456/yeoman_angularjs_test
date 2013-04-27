@@ -1,0 +1,38 @@
+<div class="container" ng-controller="EvalCalcCtrl">
+    <h1>eval.calc
+        <small>v.0.0.0</small>
+    </h1>
+    <hr>
+    <div class="form-inline">
+        <form ng-submit="calc(expression)">
+            <div class="input-append">
+                <input type="text" ng-model="expression" style="width: 900px">
+                <span class="btn add-on" ng-click="calc(expression)"><i class="icon-arrow-right"></i></span>
+            </div>
+        </form>
+        <div>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th style="width: 325px"></th>
+                    <th style="width: 25px"></th>
+                    <th style="width: 275px"></th>
+                    <th style="width: 25px"></th>
+                </tr>
+                </thead>
+                <tbody test="evaluatedExpressions">
+                <tr ng-repeat="evaluatedExpression in evaluatedExpressions">
+                    <td><span class="expression" ng-click="$parent.expression = evaluatedExpression.expression">{{evaluatedExpression.expression}} <i class="icon-circle-arrow-up"></i></span>
+                    </td>
+                    <td><span>=</span></td>
+                    <td><span class="result" ng-show="evaluatedExpression.result != null" style="cursor: pointer" ng-click="$parent.expression  = evaluatedExpression.expression">{{evaluatedExpression.result}} <i class="icon-circle-arrow-up"></i></span>
+                        <span class="result failure" ng-show="evaluatedExpression.result == null">Oops !</span>
+                    </td>
+                    <td><span><i class="icon-trash" style="cursor: pointer" ng-click="deleteEvaluatedExpression(evaluatedExpression)"></i></span></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
