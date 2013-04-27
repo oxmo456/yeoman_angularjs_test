@@ -1,1 +1,37 @@
 @import "compass_twitter_bootstrap";
+
+table span.expression i {
+  opacity: 0.2;
+}
+
+table span.result i {
+  opacity: 0.2;
+}
+
+table span {
+  display: inline-block;
+  padding: 5px;
+}
+
+table span.result.failure{
+  cursor: help;
+  color: #b94a48;
+  background: none;
+  border: none;
+}
+
+table span.result{
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #e3e3e3;
+  background: whitesmoke;
+  white-space: pre-wrap;
+}
+
+table span.expression{
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #e3e3e3;
+  background: whitesmoke;
+  white-space: pre-wrap;
+}
