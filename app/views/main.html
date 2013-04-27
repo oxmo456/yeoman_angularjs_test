@@ -29,7 +29,7 @@
                     <td><span>=</span></td>
                     <td><span class="result"
                               ng-show="evaluatedExpression.result != null" style="cursor: pointer"
-                              ng-click="$parent.expression = $parent.expression + evaluatedExpression.expression">{{evaluatedExpression.result}} <i
+                              ng-click="$parent.expression = $parent.expression + evaluatedExpression.result">{{evaluatedExpression.result}} <i
                             class="icon-circle-arrow-up"></i></span>
                         <span class="result failure"
                               ng-show="evaluatedExpression.result == null">Oops !</span>
