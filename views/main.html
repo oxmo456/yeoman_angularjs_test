@@ -22,10 +22,10 @@
                 </thead>
                 <tbody test="evaluatedExpressions">
                 <tr ng-repeat="evaluatedExpression in evaluatedExpressions">
-                    <td><span class="expression" ng-click="$parent.expression = evaluatedExpression.expression">{{evaluatedExpression.expression}} <i class="icon-circle-arrow-up"></i></span>
+                    <td><span class="expression" ng-click="$parent.expression = $parent.expression + evaluatedExpression.expression">{{evaluatedExpression.expression}} <i class="icon-circle-arrow-up"></i></span>
                     </td>
                     <td><span>=</span></td>
-                    <td><span class="result" ng-show="evaluatedExpression.result != null" style="cursor: pointer" ng-click="$parent.expression  = evaluatedExpression.expression">{{evaluatedExpression.result}} <i class="icon-circle-arrow-up"></i></span>
+                    <td><span class="result" ng-show="evaluatedExpression.result != null" style="cursor: pointer" ng-click="$parent.expression = $parent.expression + evaluatedExpression.expression">{{evaluatedExpression.result}} <i class="icon-circle-arrow-up"></i></span>
                         <span class="result failure" ng-show="evaluatedExpression.result == null">Oops !</span>
                     </td>
                     <td><span><i class="icon-trash" style="cursor: pointer" ng-click="deleteEvaluatedExpression(evaluatedExpression)"></i></span></td>
